@@ -1,0 +1,32 @@
+<ion-view view-title="createRoll">
+  <form novalidate class="simple-form" name="roll">
+    <ion-content>
+      <h2>Custom Roll</h2>
+        <div>
+          <div class="button-bar">
+            <a class="button" ng-click="addDice(4)">D4</a>
+            <a class="button" ng-click="addDice(6)">D6</a>
+            <a class="button" ng-click="addDice(8)">D8</a>
+          </div>
+          <div class="button-bar">
+            <a class="button" ng-click="addDice(10)">D10</a>
+            <a class="button" ng-click="addDice(12)">D12</a>
+            <a class="button" ng-click="addDice(20)">D20</a>
+            <a class="button" ng-click="addDice(100)">D100</a>
+          </div>
+        </div>
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="Title" ng-model="roll.titleRoll" >
+          </label>
+          <label class="item item-input">
+            <input type="number" placeholder="Plus" ng-model="roll.plusRoll">
+          </label>
+        </div>
+
+    </ion-content>
+    <div class="fixed-outside">
+        <button class="text-center button button-block button-positive"  ng-click="saveRoll(roll)">Save</button>
+    </div>
+  </form>
+</ion-view>
